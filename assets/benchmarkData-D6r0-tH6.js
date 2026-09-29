@@ -1,0 +1,6 @@
+import{y as d,aj as l,e as f,ce as u,N as m}from"./index-CIULjpTl.js";/**
+ * @license lucide-react v0.462.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const g=d("Target",[["circle",{cx:"12",cy:"12",r:"10",key:"1mglay"}],["circle",{cx:"12",cy:"12",r:"6",key:"1vlfrh"}],["circle",{cx:"12",cy:"12",r:"2",key:"1c9p78"}]]);function k(c,n){return c.products.map(r=>{const e=l(c,r);return{id:r.id,sku:r.sku,name:r.name,isSelf:r.id===n.id,status:r.status,version:e==null?void 0:e.version,total:e==null?void 0:e.result.total,unit:`kgCO₂e/${f(r.declaredUnit)}`,perKg:e&&r.massPerDeclaredUnit>0?e.result.total/r.massPerDeclaredUnit:void 0,primaryShare:e==null?void 0:e.result.primaryDataShare,massPerDeclaredUnit:r.massPerDeclaredUnit}}).sort((r,e)=>r.isSelf?-1:e.isSelf?1:0)}function S(c,n,r){var o;const e=l(c,n);if(!e)return;const i=new Map;for(const t of e.result.contributions){if(t.kind!=="node"||t.value<=0||!t.factorId)continue;const a=(o=r[t.factorId])==null?void 0:o.category;!a||!u[a]||i.set(a,(i.get(a)??0)+t.value)}const s=[...i.entries()].sort((t,a)=>a[1]-t[1])[0];if(s)return{category:s[0],label:m[s[0]]??s[0],range:u[s[0]]}}export{g as T,k as b,S as r};
